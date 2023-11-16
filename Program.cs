@@ -23,27 +23,33 @@ namespace CompoundInterestCalculator
             {
                 case 1:
                     double yearOne = money * 1.05D;
-                    Console.WriteLine(Math.Round(yearOne, 2));
+                    Console.WriteLine($"$" + Math.Round(yearOne, 2));
+                    Console.ReadKey();
                     break;
                 case 2:
                     double yearTwo1 = money * 1.05D;
                     double yearTwo2 = yearTwo1 * 1.05D;
-                    Console.WriteLine(Math.Round(yearTwo1, 2));
+                    Console.WriteLine($"$" + Math.Round(yearTwo1, 2));
+                    Console.ReadKey();
                     break;
                 case 3:
                     double yearThree1 = money * 1.05D * 1.05D * 1.05D;
-                    Console.WriteLine(Math.Round(yearThree1, 2));
+                    Console.WriteLine($"$" + Math.Round(yearThree1, 2));
+                    Console.ReadKey();
                     break;
                 case 4:
                     double yearFour = money * 1.05D * 1.05D * 1.05D * 1.05D;
-                    Console.WriteLine(Math.Round(yearFour, 2));
+                    Console.WriteLine($"$" + Math.Round(yearFour, 2));
+                    Console.ReadKey();
                     break;
                 case 5:
                     double yearFive = money * 1.05D * 1.05D * 1.05D * 1.05D * 1.05D;
-                    Console.WriteLine(Math.Round(yearFive, 2));
+                    Console.WriteLine($"$" + Math.Round(yearFive, 2));
+                    Console.ReadKey();
                     break;
                 default:
                     Console.WriteLine("Please enter value between 1-5.");
+                    Console.ReadKey();
                     break;
             }
         }
@@ -55,7 +61,7 @@ namespace CompoundInterestCalculator
             double monFun;
             double yearFun;
             NumberGather mainGather = new NumberGather();
-            Console.WriteLine("How much money are you depositing?");
+            Console.Write("How much money are you depositing?\n$");
             while (true)
             {
                 try
