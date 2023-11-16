@@ -5,15 +5,14 @@ namespace CompoundInterestCalculator
 {
     public class NumberGather // class for gathering inputs
     {
-        public int money;
-        public int apy;
-        public int years;
-        public void numbGather(int x) // x is amount of money inputted
+        public double money;
+        public double years;
+        public void numbGather(double x) // x is amount of money inputted
         {
             money = x;
         }
 
-        public void staticAPY(int z) // gathering the APY percent for calculating
+        public void yearGather(double z) // gathering the years to be calculated for interest
         {
             years = z;
         }
@@ -53,15 +52,15 @@ namespace CompoundInterestCalculator
     {
         static void Main(string[] args)
         {
-            int monFun;
-            int yearFun;
+            double monFun;
+            double yearFun;
             NumberGather mainGather = new NumberGather();
             Console.WriteLine("How much money are you depositing?");
             while (true)
             {
                 try
                 {
-                    monFun = Convert.ToInt32(Console.ReadLine());
+                    monFun = Convert.ToDouble(Console.ReadLine());
                     break;
                 }
                 catch (Exception e)
@@ -74,7 +73,7 @@ namespace CompoundInterestCalculator
             {
                 try
                 {
-                    yearFun = Convert.ToInt32(Console.ReadLine());
+                    yearFun = Convert.ToDouble(Console.ReadLine());
                     break;
                 }
                 catch (Exception e)
@@ -82,7 +81,7 @@ namespace CompoundInterestCalculator
                     Console.WriteLine("Not a valid input.");
                 }
             }
-            mainGather.staticAPY(yearFun);
+            mainGather.yearGather(yearFun);
             mainGather.numbGather(monFun);
             mainGather.apyCalc();
             
